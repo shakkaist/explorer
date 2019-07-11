@@ -152,12 +152,14 @@ Meteor.methods({
         else{
             console.log('=== Start processing genesis file ===');
 
-             // let response = HTTP.get(Meteor.settings.genesisFile);
+              let response = HTTP.get("http://ec2-18-221-56-0.us-east-2.compute.amazonaws.com:26657/genesis");
 
-            var fs = require("fs");
-            var contents = fs.readFileSync("/Users/usmanfazil/.colord/config/genesis.json");
+            // var fs = require("fs");
+            // var contents = fs.readFileSync("/home/faisalnaveed/goApps/src/github.com/Colors/build/node0/colord/config/genesis.json");
            
-            let genesis = JSON.parse(contents);
+            let genesis = JSON.parse(response.content);
+            console.log(genesis.result.genesis)
+            genesis = genesis.result.genesis
             let chainParams = {
                 chainId: genesis.chain_id,
                 genesisTime: genesis.genesis_time,

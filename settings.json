@@ -1,7 +1,7 @@
 {
     "public":{
         "chainName": "colorchain",
-        "chainId": "testing",
+        "chainId": "chain-jQ1Ohc",
         "gtm": "{Add your Google Tag Manager ID here}",
         "slashingWindow": 10000,
         "uptimeWindow": 250,
@@ -16,10 +16,10 @@
         "stakingFraction": 1000000,
         "coingeckoId": "cosmos"
     },
-    "genesisFile": "../../.colord/config/genesis.json",
+    "genesisFile": "http://ec2-18-221-56-0.us-east-2.compute.amazonaws.com:26657/genesis",
     "remote":{
-        "rpc":"http://localhost:26657",
-        "lcd":"http://localhost:1317"
+        "rpc":"http://ec2-18-221-56-0.us-east-2.compute.amazonaws.com:26657",
+        "lcd":"http://ec2-18-221-56-0.us-east-2.compute.amazonaws.com:1317"
     },
     "debug": {
         "startTimer": true,
