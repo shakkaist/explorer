@@ -19,15 +19,15 @@ export default class Footer extends React.Component {
     render() {
         return (
             <div>
-                <Navbar color="light" light expand="md" fixed="bottom" id="footer" className="d-none d-md-flex">
-                    <span className="text-muted"><a href="https://raw.githubusercontent.com/forbole/big_dipper/master/LICENSE" target="_blank"><T>navbar.license</T></a> &copy;2018-{moment().format('YYYY')}. </span>
+                <Navbar light expand="md" fixed="bottom" id="footer" className="d-md-flex footer-color">
+                    <span className="text-muted">All rights reserved &copy;{moment().format('YYYY')}</span>
                     <Nav className="ml-auto" navbar>
                         <NavItem>
-                            <NavLink href="https://www.github.com/forbole/big_dipper" target="_blank"><i className="fab fa-github"></i> <T>navbar.forkMe</T></NavLink>
+                            <NavLink className="white">Colors Network</NavLink>
                         </NavItem>
                     </Nav>
                 </Navbar>
-                <Navbar color="light" light fixed="bottom" className="d-block d-md-none mobile-menu">
+                {/* <Navbar color="light" light fixed="bottom" className="d-block d-md-none mobile-menu">
                     <Nav>
                         <NavItem>
                             <NavLink tag={Link} to="/"><i className="material-icons">home</i></NavLink>
@@ -48,7 +48,7 @@ export default class Footer extends React.Component {
                             <NavLink tag={Link} to="/voting-power-distribution"><i className="material-icons">power_on</i></NavLink>
                         </NavItem>
                     </Nav>
-                </Navbar>
+                </Navbar> */}
             </div>  
         );
     }
