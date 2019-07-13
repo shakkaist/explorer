@@ -12,31 +12,31 @@ const T = i18n.createComponent();
 export default class Consensus extends Component{
     constructor(props){
         super(props);
-        this.state = {
-            chainStopped: false,
-        }
+        // this.state = {
+        //     chainStopped: false,
+        // }
     }
 
-    componentDidUpdate(prevProps){
-        if (prevProps.consensus != this.props.consensus){
-            if (this.props.consensus.latestBlockTime){
-                // console.log()
-                let lastSync = moment(this.props.consensus.latestBlockTime);
-                let current = moment();
-                let diff = current.diff(lastSync);
-                if (diff > 60000){
-                    this.setState({
-                        chainStopped:true
-                    })
-                }
-                else{
-                    this.setState({
-                        chainStopped:false
-                    })
-                }
-            }
-        }
-    }
+    // componentDidUpdate(prevProps){
+    //     if (prevProps.consensus != this.props.consensus){
+    //         if (this.props.consensus.latestBlockTime){
+    //             // console.log()
+    //             let lastSync = moment(this.props.consensus.latestBlockTime);
+    //             let current = moment();
+    //             let diff = current.diff(lastSync);
+    //             if (diff > 60000){
+    //                 this.setState({
+    //                     chainStopped:true
+    //                 })
+    //             }
+    //             else{
+    //                 this.setState({
+    //                     chainStopped:false
+    //                 })
+    //             }
+    //         }
+    //     }
+    // }
 
     render(){
         if (this.props.loading){
@@ -49,45 +49,58 @@ export default class Consensus extends Component{
                 let identity = (proposer&&proposer.description&&proposer.description.identity)?proposer.description.identity:"";
                 return (
                     <div>
-                        {(this.state.chainStopped)?<Card body inverse color="danger">
+                        {/* {(this.state.chainStopped)?<Card body inverse color="danger">
                             <span><T _purify={false} time={moment(this.props.consensus.latestBlockTime).fromNow(true)}>chainStatus.stopWarning</T></span>             
-                        </Card>:''}
-                        <Card className="status consensus-state">
-                            <div className="card-header"><T>consensus.consensusState</T></div>
-                            <CardBody>
-                                <Row>
-                                    <Col md={8} lg={6}>
-                                        <Row>
-                                            <Col md={2}>
+                        </Card>:''} */}
+                        {/* <Card className="status consensus-state"> */}
+                            {/* <div className="card-header"><T>consensus.consensusState</T></div> */}
+                            {/* <CardBody className="shade"> */}
+                                        <Row className="status text-center">
+                                            <Col md={6}>
+                                                <Card body className="shade">
                                                 <Row>
                                                     <Col md={12} xs={4}><CardSubtitle><T>common.height</T></CardSubtitle></Col>
                                                     <Col md={12} xs={8}><span className="value">{numbro(this.props.consensus.votingHeight).format('0,0')}</span></Col>
                                                 </Row>
+                                                </Card>
                                             </Col>
-                                            <Col md={2}>
+                                            <Col md={6}>
+                                            <Card body className="shade">
                                                 <Row>
                                                     <Col md={12} xs={4}><CardSubtitle><T>consensus.round</T></CardSubtitle></Col>
                                                     <Col md={12} xs={8}><span className="value">{this.props.consensus.votingRound}</span></Col>
                                                 </Row>
+                                                </Card>
                                             </Col>
-                                            <Col md={2}>
+                                        </Row>
+                                        <Row className="status text-center">
+                                            <Col md={6}>
+                                            <Card body className="shade">
                                                 <Row>
                                                     <Col md={12} xs={4}><CardSubtitle><T>consensus.step</T></CardSubtitle></Col>
                                                     <Col md={12} xs={8}><span className="value">{this.props.consensus.votingStep}</span></Col>
                                                 </Row>
+                                                </Card>
                                             </Col>
                                             <Col md={6}>
+                                            <Card body className="shade">
                                                 <Row>
                                                     <Col md={12} xs={4}><CardSubtitle><T>blocks.proposer</T></CardSubtitle></Col>
                                                     <Col md={12} xs={8}><span className="value"><Link to={"/validator/"+this.props.consensus.proposerAddress} ><Avatar moniker={moniker} identity={identity} address={this.props.consensus.proposerAddress} list={true} />{moniker}</Link></span></Col>
                                                 </Row>
+                                                </Card>
                                             </Col>
                                         </Row>                            
-                                    </Col>
-                                    <Col md={4} lg={6}><CardSubtitle><T>common.votingPower</T></CardSubtitle><Progress animated value={this.props.consensus.votedPower} className="value">{this.props.consensus.votedPower}%</Progress></Col>
-                                </Row>
-                            </CardBody>
-                        </Card>
+                                   
+                                    <Row>
+                                        <Col md={12}>
+                                        <Card body className="shade">
+                                            <CardSubtitle><T>common.votingPower</T></CardSubtitle><Progress animated value={this.props.consensus.votedPower} className="value">{this.props.consensus.votedPower}%</Progress>
+                                        </Card>
+                                        </Col>
+                                    </Row>
+                            {/* </CardBody>
+                        </Card> */}
                     </div>);
             }
             else{

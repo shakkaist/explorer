@@ -151,9 +151,10 @@ export default class ChainStatus extends React.Component {
         else {
             if (this.props.statusExist && this.props.status.prevotes){
                 return(
+                    <div>
                     <Row className="status text-center">
-                        <Col lg={3} md={6}>
-                            <Card body>
+                        <Col lg={6}>
+                            <Card body className="shade">
                                 <CardTitle><T>chainStatus.latestHeight</T></CardTitle>
                                 <CardText>
                                     <span className="display-4 value text-primary">{this.state.blockHeight}</span>
@@ -161,8 +162,8 @@ export default class ChainStatus extends React.Component {
                                 </CardText>   
                             </Card>
                         </Col>
-                        <Col lg={3} md={6}>
-                            <Card body>
+                        <Col lg={6}>
+                            <Card body className="shade">
                                 <UncontrolledDropdown size="sm" className="more">
                                     <DropdownToggle>
                                         <i className="material-icons">more_vert</i>
@@ -180,14 +181,16 @@ export default class ChainStatus extends React.Component {
                                 </CardText>   
                             </Card>
                         </Col>
-                        <Col lg={3} md={6}>
-                            <Card body>
+                        </Row>
+                        <Row className="status text-center">
+                        <Col lg={6}>
+                            <Card body className="shade">
                                 <CardTitle><T>chainStatus.activeValidators</T></CardTitle>
                                 <CardText><span className="display-4 value text-primary">{this.state.numValidators}</span><T totalValidators={this.state.totalNumValidators}>chainStatus.outOfValidators</T></CardText>   
                             </Card>
                         </Col>
-                        <Col lg={3} md={6}>
-                            <Card body>
+                        <Col lg={6}>
+                            <Card body className="shade">
                                 <UncontrolledDropdown size="sm" className="more">
                                     <DropdownToggle>
                                         <i className="material-icons">more_vert</i>
@@ -203,6 +206,7 @@ export default class ChainStatus extends React.Component {
                             </Card>
                         </Col>
                     </Row>
+                    </div>
                 )
             }
             else{
