@@ -2,13 +2,13 @@ import React,{ Component } from 'react';
 import { HTTP } from 'meteor/http'
 import {
     Badge,
-    // Collapse,
+    Collapse,
     Navbar,
-    // NavbarToggler,
+    NavbarToggler,
     NavbarBrand,
-    // Nav,
-    // NavItem,
-    // NavLink,
+    Nav,
+    NavItem,
+    NavLink,
     // Input,
     // InputGroup,
     // InputGroupAddon,
@@ -88,8 +88,8 @@ export default class Header extends Component {
               </UncontrolledDropdown>
               <SearchBar id="header-search" history={this.props.history} />
               
-              {/* <NavbarToggler onClick={this.toggle} /> */}
-              {/* <Collapse isOpen={this.state.isOpen} navbar>
+              <NavbarToggler onClick={this.toggle} />
+              <Collapse isOpen={this.state.isOpen} navbar>
                   <Nav className="ml-auto text-nowrap" navbar>
                       <NavItem>
                           <NavLink tag={Link} to="/validators"><T>navbar.validators</T></NavLink>
@@ -106,7 +106,7 @@ export default class Header extends Component {
                       <NavItem>
                           <NavLink tag={Link} to="/voting-power-distribution"><T>navbar.votingPower</T></NavLink>
                       </NavItem>
-                      <NavItem>
+                      {/* <NavItem>
                           <UncontrolledDropdown inNavbar>
                               <DropdownToggle nav caret>
                                   <T>navbar.lang</T>
@@ -117,9 +117,9 @@ export default class Header extends Component {
                                   <DropdownItem onClick={(e) => this.handleLanguageSwitch('zh-Hans', e)}><T>navbar.simChinese</T></DropdownItem>
                               </DropdownMenu>
                           </UncontrolledDropdown>
-                      </NavItem>
+                      </NavItem> */}
                   </Nav>
-              </Collapse> */}
+              </Collapse>
           </Navbar>
       );
   }

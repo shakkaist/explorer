@@ -6,8 +6,8 @@ import TopValidators from './TopValidatorsContainer.js';
 import Chart from './ChartContainer.js';
 import ChainStates from '../components/ChainStatesContainer.js'
 import { Helmet } from "react-helmet";
-import SideNav, { NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
-import '@trendmicro/react-sidenav/dist/react-sidenav.css';
+// import SideNav, { NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
+// import '@trendmicro/react-sidenav/dist/react-sidenav.css';
 // import {Router} from 'react-router-dom';
 // import { Link } from 'react-router-dom';
 
@@ -47,7 +47,7 @@ export default class Home extends Component{
                 <title>Colors | Cosmos Explorer by RNS</title>
                 <meta name="description" content="Cosmos is a decentralized network of independent parallel blockchains, each powered by BFT consensus algorithms like Tendermint consensus." />
             </Helmet>
-            <SideNav
+            {/* <SideNav
                 onSelect={(selected) => {
                     const to = '/' + selected;
                 if (location.pathname !== to) {
@@ -57,54 +57,54 @@ export default class Home extends Component{
             >
                 <SideNav.Toggle />
                 <SideNav.Nav defaultSelected="home">
-                    <NavItem eventKey="home">
+                    <NavItem eventKey="home"> */}
                         {/* <NavLink tag={Link} to="/"></NavLink> */}
-                        <NavIcon>
+                        {/* <NavIcon>
                             <i className="fa fa-fw fa-th-large" style={{ fontSize: '1.75em' }} />
                         </NavIcon>
                         <NavText>
                             Dashboard
                         </NavText>
                     </NavItem>
-                    <NavItem eventKey="validators">
+                    <NavItem eventKey="validators"> */}
                         {/* <NavLink tag={Link} to="/validators"><T>navbar.validators</T></NavLink> */}
-                        <NavIcon>
+                        {/* <NavIcon>
                             <i className="fa fa-fw fa-signal" style={{ fontSize: '1.75em' }} />
                         </NavIcon>
                         <NavText>
                             Validators
                         </NavText>
                     </NavItem>
-                    <NavItem eventKey="blocks">
+                    <NavItem eventKey="blocks"> */}
                         {/* <NavLink tag={Link} to="/blocks"><T>navbar.blocks</T></NavLink> */}
-                        <NavIcon>
+                        {/* <NavIcon>
                             <i className="fa fa-fw fa-cube" style={{ fontSize: '1.75em' }} />
                         </NavIcon>
                         <NavText>
                             Blocks
                         </NavText>
                     </NavItem>
-                    <NavItem eventKey="transactions">
+                    <NavItem eventKey="transactions"> */}
                         {/* <NavLink tag={Link} to="/transactions"><T>navbar.transactions</T></NavLink> */}
-                        <NavIcon>
+                        {/* <NavIcon>
                             <i className="fa fa-fw fa-random" style={{ fontSize: '1.75em' }} />
                         </NavIcon>
                         <NavText>
                             Transactions
                         </NavText>
                     </NavItem>
-                    <NavItem eventKey="proposals">
+                    <NavItem eventKey="proposals"> */}
                         {/* <NavLink tag={Link} to="/proposals"><T>navbar.proposals</T></NavLink> */}
-                        <NavIcon>
+                        {/* <NavIcon>
                             <i className="fa fa-fw fa-list-ul" style={{ fontSize: '1.75em' }} />
                         </NavIcon>
                         <NavText>
                             Proposals
                         </NavText>
                     </NavItem>
-                    <NavItem eventKey="voting-power-distribution">
+                    <NavItem eventKey="voting-power-distribution"> */}
                         {/* <NavLink tag={Link} to="/voting-power-distribution"><T>navbar.votingPower</T></NavLink> */}
-                        <NavIcon>
+                        {/* <NavIcon>
                             <i className="fa fa-fw fa-bolt" style={{ fontSize: '1.75em' }} />
                         </NavIcon>
                         <NavText>
@@ -112,7 +112,7 @@ export default class Home extends Component{
                         </NavText>
                     </NavItem>
                 </SideNav.Nav>
-            </SideNav>
+            </SideNav> */ }
         
             <Row>
                 <Col md={3} xs={12}><h1>{Meteor.settings.public.chainName}</h1></Col>

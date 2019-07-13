@@ -624,7 +624,7 @@
  .container-fluid {
      width: 100%;
      padding-right: 15px;
-     padding-left: 75px;
+     padding-left: 15px;
      margin-right: auto;
      margin-left: auto
  }
@@ -6994,6 +6994,11 @@
      transform: translateX(100%)
  }
  
+ .sidenav---sidenav---_2tBP {
+    background: rgba(0, 0, 0, 0.03) !important;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4) !important;
+ }
+
  .carousel-item-prev:not(.carousel-item-right),
  .active.carousel-item-left {
      -webkit-transform: translateX(-100%);
