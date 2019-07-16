@@ -4,7 +4,7 @@ import { Link,  } from 'react-router-dom';
 import numbro from 'numbro';
 import moment from 'moment';
 import Avatar from '../components/Avatar.jsx';
-import TranactionTabs from '../transactions/TransactionTabs.jsx';
+import TransactionTabs from '../transactions/TransactionTabs.jsx';
 import { Helmet } from 'react-helmet';
 import i18n from 'meteor/universe:i18n';
 
@@ -51,18 +51,18 @@ export default class Block extends Component{
                 let moniker = proposer?proposer.description.moniker:'';
                 let identity = proposer?proposer.description.identity:'';
 
-                return <Container id="block">
+                return <Container id="block" className="paddingleft">
                     <Helmet>
-                        <title>Block {numbro(block.height).format("0,0")} on Cosmos Hub | The Big Dipper</title>
+                        <title>Block {numbro(block.height).format("0,0")} on Colors Explorer | Colors</title>
                         <meta name="description" content={"Block details of height "+numbro(block.height).format("0,0")} />
                     </Helmet>
                     <h4><T>blocks.block</T> {numbro(block.height).format("0,0")}</h4>
                     <Card>
-                        <div className="card-header"><T>common.information</T></div>
+                        <div className="card-header backgroundcolor"><T>common.information</T></div>
                         <CardBody>
                             <Row>
                                 <Col md={4} className="label"><T>common.hash</T></Col>
-                                <Col md={8} className="value text-nowrap address">{block.hash}</Col>
+                                <Col md={8} className="value address">{block.hash}</Col>
                                 <Col md={4} className="label"><T>blocks.proposer</T></Col>
                                 <Col md={8} className="value"><Link to={"/validator/"+((proposer)?proposer.operator_address:'')}><Avatar moniker={moniker} identity={identity} address={block.proposerAddress} list={true} /> {moniker}</Link></Col>
                                 <Col md={4} className="label"><T>blocks.numOfTransactions</T></Col>
@@ -72,7 +72,7 @@ export default class Block extends Component{
                             </Row>
                         </CardBody>
                     </Card>
-                    <TranactionTabs 
+                    <TransactionTabs 
                         transferTxs={this.state.transferTxs}
                         stakingTxs={this.state.stakingTxs}
                         distributionTxs={this.state.distributionTxs}

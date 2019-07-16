@@ -10,6 +10,8 @@ import Block from './BlockContainer.js';
 import ChainStates from '../components/ChainStatesContainer.js'
 import { Helmet } from 'react-helmet';
 import i18n from 'meteor/universe:i18n';
+import SideNav, { NavItem, NavIcon, NavText} from '@trendmicro/react-sidenav';
+import '@trendmicro/react-sidenav/dist/react-sidenav.css';
 
 const T = i18n.createComponent();
 export default class BlocksTable extends Component {
@@ -21,7 +23,11 @@ export default class BlocksTable extends Component {
         };
 
         this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
-    }
+    };
+    state = {
+        selected: 'blocks',
+        expanded: false
+    };
 
     isBottom(el) {
         return el.getBoundingClientRect().bottom <= window.innerHeight;
@@ -60,7 +66,7 @@ export default class BlocksTable extends Component {
                 sidebarOpen: (this.props.location.pathname.split("/blocks/").length == 2)
             })
         }
-    }
+    };
 
     onSetSidebarOpen(open) {
         // console.log(open);
@@ -72,12 +78,26 @@ export default class BlocksTable extends Component {
                 Meteor.clearTimeout(timer);
             },500)
         }); 
-    }
+    };
+
+    onSelect = (selected) => {
+        this.setState({ selected: selected });
+    };
+
+    onToggle = (expanded) => {
+        this.setState({ expanded: expanded });
+    };
 
     render(){
-        return <div>
+        const { expanded, selected } = this.state;
+        return (
+        <div>
+            <div style={{
+                        marginLeft: expanded ? 240 : 64,
+                        padding: '15px 20px 0 20px'
+                    }}>
             <Helmet>
-                <title>Latest Blocks on Cosmos Hub | The Big Dipper</title>
+                <title>Latest Blocks on Colors Explorer | Colors</title>
                 <meta name="description" content="Latest blocks committed by validators on Cosmos Hub" />
             </Helmet>
             <Row>
@@ -105,6 +125,66 @@ export default class BlocksTable extends Component {
                 <Blocks limit={this.state.limit} />
             </Container>
             <LoadMore show={this.state.loadmore} />
-        </div>
+            </div>
+            <SideNav className="sidenav" onSelect={this.onSelect} onToggle={this.onToggle}>
+                <SideNav.Toggle />
+                <SideNav.Nav selected={selected} defaultSelected="blocks">
+                    <NavItem eventKey="dashboard" onClick={ e => this.props.history.push("/") }>
+                        <NavIcon>
+                            <i className="fa fa-fw fa-th-large" style={{ fontSize: '1.75em', color: 'black' }} />
+                        </NavIcon>
+                        <NavText>
+                            Dashboard
+                        </NavText>
+                        
+                    </NavItem>
+                    <NavItem eventKey="validators" onClick={ e => this.props.history.push("/validators") }>
+                        <NavIcon>
+                            <i className="fa fa-fw fa-signal" style={{ fontSize: '1.75em', color: 'black' }} />
+                        </NavIcon>
+                        <NavText>
+                            Validators
+                        </NavText>
+                        
+                    </NavItem>
+                    <NavItem eventKey="blocks" onClick={ e => this.props.history.push("/blocks") }>
+                        <NavIcon>
+                            <i className="fa fa-fw fa-cube" style={{ fontSize: '1.75em', color: 'black' }} />
+                        </NavIcon>
+                        <NavText>
+                            Blocks
+                        </NavText>
+                        
+                    </NavItem>
+                    <NavItem eventKey="transactions" onClick={ e => this.props.history.push("/transactions") }>
+                        <NavIcon>
+                            <i className="fa fa-fw fa-random" style={{ fontSize: '1.75em', color: 'black' }} />
+                        </NavIcon>
+                        <NavText>
+                            Transactions
+                        </NavText>
+                        
+                    </NavItem>
+                    <NavItem eventKey="proposals" onClick={ e => this.props.history.push("/proposals") }>
+                        <NavIcon>
+                            <i className="fa fa-fw fa-list-ul" style={{ fontSize: '1.75em', color: 'black' }} />
+                        </NavIcon>
+                        <NavText>
+                            Proposals
+                        </NavText>
+                        
+                    </NavItem>
+                    <NavItem eventKey="voting-power-distribution" onClick={ e => this.props.history.push("/voting-power-distribution") }>
+                        <NavIcon>
+                            <i className="fa fa-fw fa-bolt" style={{ fontSize: '1.75em', color: 'black'}} />
+                        </NavIcon>
+                        <NavText>
+                            Voting Power
+                        </NavText>
+                    </NavItem>
+                </SideNav.Nav>
+            </SideNav>
+            </div>
+            )
     }
 }

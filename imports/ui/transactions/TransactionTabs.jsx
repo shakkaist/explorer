@@ -42,7 +42,7 @@ export default class TransactionTabs extends Component{
 
     render(){
         return <Card>
-            <CardHeader><T>transactions.transactions</T> <small>(<T>common.last</T> 100)</small></CardHeader>
+            <CardHeader className="backgroundcolor"><T>transactions.transactions</T> <small>(<T>common.last</T> 100)</small></CardHeader>
             <CardBody>
                 <Nav tabs className="tx-types">
                     <NavItem>

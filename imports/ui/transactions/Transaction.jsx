@@ -30,7 +30,7 @@ export default class Transaction extends Component{
                 let tx = this.props.transaction;
                 return <Container id="transaction">
                     <Helmet>
-                        <title>Transaction {tx.txhash} on Cosmos Hub | The Big Dipper</title>
+                        <title>Transaction {tx.txhash} on Colors Explorer | Colors</title>
                         <meta name="description" content={"Details of transaction "+tx.txhash} />
                     </Helmet>
                     <h4><T>transactions.transaction</T> {(!tx.code)?<TxIcon valid />:<TxIcon />}</h4>
@@ -45,7 +45,7 @@ export default class Transaction extends Component{
                         </Alert>
                     </Col></Row>:''}
                     <Card>
-                        <div className="card-header"><T>common.information</T></div>
+                        <div className="card-header backgroundcolor"><T>common.information</T></div>
                         <CardBody>
                             <Row>
                                 <Col md={4} className="label"><T>common.hash</T></Col>
@@ -64,7 +64,7 @@ export default class Transaction extends Component{
                         </CardBody>
                     </Card>
                     <Card>
-                        <div className="card-header"><T>transactions.activities</T></div>
+                        <div className="card-header backgroundcolor"><T>transactions.activities</T></div>
                     </Card>
                     {(tx.tx.value.msg && tx.tx.value.msg.length >0)?tx.tx.value.msg.map((msg,i) => {
                         return <Card body key={i}><Activities msg={msg} invalid={(!!tx.code)} tags={tx.tags} /></Card>

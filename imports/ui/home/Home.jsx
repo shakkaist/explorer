@@ -49,10 +49,6 @@ export default class Home extends Component{
         this.setState({ expanded: expanded });
     };
     
-    navigate = (pathname) => () => {
-        this.setState({ selected: pathname });
-    };
-    
     render() {
         const { expanded, selected } = this.state;
         return (
@@ -62,7 +58,7 @@ export default class Home extends Component{
                         padding: '15px 20px 0 20px'
                     }}>
             <Helmet>
-                <title>Colors | Cosmos Explorer by RNS</title>
+                <title>Colors | Explorer by RNS</title>
                 <meta name="description" content="Cosmos is a decentralized network of independent parallel blockchains, each powered by BFT consensus algorithms like Tendermint consensus." />
             </Helmet>
             <Row>
