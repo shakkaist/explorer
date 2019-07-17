@@ -1,7 +1,7 @@
 {
     "public":{
         "chainName": "colorchain",
-        "chainId": "testing",
+        "chainId": "chain-sdL7zQ",
         "gtm": "{Add your Google Tag Manager ID here}",
         "slashingWindow": 10000,
         "uptimeWindow": 250,
