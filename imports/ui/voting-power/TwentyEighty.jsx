@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Pie} from 'react-chartjs-2';
+import {Doughnut} from 'react-chartjs-2';
 import { Row, Col, Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button, Progress, Spinner } from 'reactstrap';
 import numbro from 'numbro';
@@ -35,12 +35,12 @@ export default class TwentyEighty extends Component{
                                 bottomPercent
                             ],
                             backgroundColor: [
-                                '#bd081c',
-                                '#ff63c0'
+                                '#b43db7',
+                                '#59ccc8'
                             ],
                             hoverBackgroundColor: [
-                                '#bd081c',
-                                '#ff63c0'
+                                '#b43db7',
+                                '#59ccc8'
                             ]
                         }
                     ]
@@ -73,9 +73,9 @@ export default class TwentyEighty extends Component{
             if (this.props.statsExist && this.props.stats){
                 return (                    
                     <Card>
-                        <div className="card-header"><T>votingPower.pareto</T></div>
+                        <div className="card-header backgroundcolor"><T>votingPower.pareto</T></div>
                         <CardBody>
-                            <Pie data={this.state.data} options={this.state.options} />
+                            <Doughnut data={this.state.data} options={this.state.options} />
                         </CardBody>
                     </Card>
                 );   

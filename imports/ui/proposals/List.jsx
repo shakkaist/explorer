@@ -62,11 +62,11 @@ export default class List extends Component{
                     <thead>
                         <tr>
                             <th className="d-none d-sm-table-cell counter"><i className="fas fa-hashtag"></i> <T>proposals.proposalID</T></th>
-                            <th className="title"><i className="material-icons">view_headline</i> <span className="d-none d-sm-inline"><T>proposals.title</T></span></th>
+                            <th className="title"><i className="fas fa-bars"></i> <span className="d-none d-sm-inline"><T>proposals.title</T></span></th>
                             <th className="status"><i className="fas fa-toggle-on"></i> <span className="d-none d-sm-inline"><T>proposals.status</T></span></th>
                             <th className="submit-block"><i className="fas fa-box"></i> <span className="d-none d-sm-inline"><T>proposals.submitTime</T> (UTC)</span></th>
                             <th className="voting-start"><i className="fas fa-box-open"></i> <span className="d-none d-sm-inline"><T>proposals.votingStartTime</T> (UTC)</span></th>
-                            <th className="deposit text-right"><i className="material-icons">attach_money</i> <span className="d-none d-sm-inline"><T>proposals.totalDeposit</T></span></th>
+                            <th className="deposit text-right"><i className="fas fa-dollar-sign"></i> <span className="d-none d-sm-inline"><T>proposals.totalDeposit</T></span></th>
                         </tr>
                     </thead>
                     <tbody>{this.state.proposals}</tbody>
