@@ -16,10 +16,10 @@
         "stakingFraction": 1000000,
         "coingeckoId": "cosmos"
     },
-    "genesisFile": "http://localhost:26657/genesis",
+    "genesisFile": "http://ec2-3-15-152-52.us-east-2.compute.amazonaws.com:26657/genesis",
     "remote":{
-        "rpc":"http://localhost:26657",
-        "lcd":"http://localhost:1317"
+        "rpc":"http://ec2-3-15-152-52.us-east-2.compute.amazonaws.com:26657",
+        "lcd":"http://ec2-3-15-152-52.us-east-2.compute.amazonaws.com:1317"
     },
     "debug": {
         "startTimer": true,
