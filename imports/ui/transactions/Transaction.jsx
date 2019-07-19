@@ -28,7 +28,7 @@ export default class Transaction extends Component{
             if (this.props.transactionExist){
                 // console.log(this.props.transaction);
                 let tx = this.props.transaction;
-                return <Container id="transaction">
+                return <Container id="transaction" className="paddingleft">
                     <Helmet>
                         <title>Transaction {tx.txhash} on Colors Explorer | Colors</title>
                         <meta name="description" content={"Details of transaction "+tx.txhash} />
@@ -49,7 +49,7 @@ export default class Transaction extends Component{
                         <CardBody>
                             <Row>
                                 <Col md={4} className="label"><T>common.hash</T></Col>
-                                <Col md={8} className="value text-nowrap address">{tx.txhash}</Col>
+                                <Col md={8} className="value address">{tx.txhash}</Col>
                                 <Col md={4} className="label"><T>common.height</T></Col>
                                 <Col md={8} className="value"><Link to={"/blocks/"+tx.height}>{numbro(tx.height).format("0,0")}</Link> ({moment.utc(tx.block().time).format("D MMM YYYY, h:mm:ssa z")})</Col>
                                 <Col md={4} className="label"><T>transactions.fee</T></Col>

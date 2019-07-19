@@ -8,6 +8,7 @@ import ChainStates from '../components/ChainStatesContainer.js'
 import { Helmet } from "react-helmet";
 import SideNav, { NavItem, NavIcon, NavText} from '@trendmicro/react-sidenav';
 import '@trendmicro/react-sidenav/dist/react-sidenav.css';
+import TwentyEighty from '../voting-power/TwentyEightyContainer.js';
 
 export default class Home extends Component{
     constructor(props){
@@ -79,7 +80,7 @@ export default class Home extends Component{
             </Row>
             <Row>
                 <Col md={6}>
-                    <Chart />
+                    <TwentyEighty />
                 </Col>
                 <Col md={6}>
                     <TopValidators />

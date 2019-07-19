@@ -93,6 +93,7 @@ a.navbar-brand .logo {
 
 #mobile-searchbar {
     margin-bottom: 0.5em;
+    padding-left: 4rem !important;
 }
 
 #footer{
