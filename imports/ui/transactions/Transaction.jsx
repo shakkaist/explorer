@@ -72,7 +72,7 @@ export default class Transaction extends Component{
                 </Container>
             }
             else{
-                return <Container id="transaction"><div><T>transactions.noTxFound</T></div></Container>
+                return <Container id="transaction" className="paddingleft"><div><T>transactions.noTxFound</T></div></Container>
             }
         }
     }

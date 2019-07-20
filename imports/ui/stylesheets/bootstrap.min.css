@@ -6188,6 +6188,30 @@
     text-align: center
  }
 
+ .MultiSend {
+    background-color: green;
+    border-radius: 5px;
+    color: white;
+    font-size: x-small;
+    text-align: center
+ }
+
+ .Withdraw {
+    background-color: #808080c9;
+    border-radius: 5px;
+    color: white;
+    font-size: small;
+    text-align: center
+ }
+ 
+ .Delegate {
+    background-color: orange;
+    border-radius: 5px;
+    color: white;
+    font-size: smaller;
+    text-align: center
+ }
+
  .list-group-flush:first-child .list-group-item:first-child {
      border-top: 0
  }

@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Row, Col, Card, Alert, Spinner } from 'reactstrap';
 import { TxIcon, Type } from '../components/Icons.jsx';
-import Activities from '../components/Activities.jsx';
+// import Activities from '../components/Activities.jsx';
 import CosmosErrors from '../components/CosmosErrors.jsx';
 import TimeAgo from '../components/TimeAgo.jsx';
 import numbro from 'numbro';
@@ -17,13 +17,12 @@ export const TransactionRow = (props) => {
         {/* <Col xs={12} lg={7} className="activity">{(tx.tx.value.msg && tx.tx.value.msg.length >0)?tx.tx.value.msg.map((msg,i) => {
             return <Card body key={i}><Activities msg={msg} invalid={(!!tx.code)} tags={tx.tags} /></Card>
         }):''}</Col> */}
-        {/* {tx.tx.value.msg[0].type} */}
-        {(!props.blockList)?<Col xs={2} md={2}>{(!tx.code)?<TxIcon valid />:<TxIcon />}</Col>:''}
+        <Col xs={(!props.blockList)?2:2} md={2}>{(!tx.code)?<TxIcon valid />:<TxIcon />}</Col>
 
-        {(!props.blockList)?<Col xs={2} md={2}>{tx.tx.value.msg[0].value.amount}</Col>:''}
+        {(!props.blockList)?<Col xs={2} md={2}>{tx.tx.value.msg[0].value.amount[0].amount} {tx.tx.value.msg[0].value.amount[0].denom}</Col>:''}
 
         <Col xs={(!props.blockList)?2:2} md={(!props.blockList)?2:2} className="fee"><i className="material-icons d-lg-none">monetization_on</i> {tx.tx.value.fee.amount?tx.tx.value.fee.amount.map((fee,i) => {
-            return <span className="text-nowrap" key={i}>{numbro(fee.amount).format(0,0)}</span>
+            return <span className="text-nowrap" key={i}>{numbro(fee.amount).format(0,0)} stake</span>
         }):<span>No fee</span>}</Col>
         {(!props.blockList)?<Col xs={2} md={2}><i className="fas fa-database d-lg-none"></i> <Link to={"/blocks/"+tx.height}>{numbro(tx.height).format("0,0")}</Link></Col>:''}
         <Col xs={(!props.blockList)?{size:6,order:"first"}:{size:12,order:"first"}} md={(!props.blockList)?{size:3, order: "first"}:{size:7, order: "first"}} lg={(!props.blockList)?{size:1,order:"first"}:{size:2,order:"first"}} className="text-truncate"><i className="fas fa-hashtag d-lg-none"></i> <Link to={"/transactions/"+tx.txhash}>{tx.txhash}</Link></Col>

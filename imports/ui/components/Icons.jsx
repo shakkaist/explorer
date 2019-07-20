@@ -59,45 +59,45 @@ export const Type = (props) => {
         case 'cosmos-sdk/MsgSend':
             return <p className="Send">Send</p>
         case "cosmos-sdk/MsgMultiSend":
-            return <p>Message Multi Send</p>
+            return <p className="MultiSend">Message Multi Send</p>
             
             // staking
         case "cosmos-sdk/MsgCreateValidator":
-            return <p>Message Create Validator</p>
+            return <p className="Withdraw">Create Validator</p>
         case "cosmos-sdk/MsgEditValidator":
-            return <p>Message Edit Validator</p>
+            return <p className="Withdraw">Edit Validator</p>
         case "cosmos-sdk/MsgDelegate":
-            return <p>Message Delegate</p>
+            return <p className="Delegate">Delegate</p>
         case "cosmos-sdk/MsgUndelegate":
-            return <p>Message Undelegate</p>
+            return <p className="Delegate">Undelegate</p>
         case "cosmos-sdk/MsgBeginRedelegate":
-            return <p>Message Begin Redelegate</p>
+            return <p className="Delegate">Redelegate</p>
             
             // gov
         case "cosmos-sdk/MsgSubmitProposal":
-            return <p>Message Submit Proposal</p>
+            return <p className="Send">Submit Proposal</p>
         case "cosmos-sdk/MsgDeposit":
-            return <p>Message Deposit</p>
+            return <p className="Send">Deposit</p>
         case "cosmos-sdk/MsgVote":
-            return <p>Message Vote</p>
+            return <p className="Send">Vote</p>
             
             // distribution
         case "cosmos-sdk/MsgWithdrawValidatorCommission":
-            return <p>Message Withdraw Validator Commission</p>
+            return <p className="Withdraw">Withdraw Commission</p>
         case "cosmos-sdk/MsgWithdrawDelegationReward":
-            return <p>Message Withdraw Delegation Reward</p>
+            return <p className="Withdraw">Withdraw</p>
         case "cosmos-sdk/MsgModifyWithdrawAddress":
-            return <p>Message Modify Withdraw Address</p>
+            return <p className="Withdraw">Modify Withdraw Address</p>
     
             // slashing
         case "cosmos-sdk/MsgUnjail":
-            return <p>Message Unjail</p>
+            return <p className="Delegate">Unjail</p>
             
             // ibc
         case "cosmos-sdk/IBCTransferMsg":
-            return <p>IBC Transfer Message</p>
+            return <p className="Delegate">IBC Transfer</p>
         case "cosmos-sdk/IBCReceiveMsg":
-            return <p>IBC Receive Message</p>
+            return <p className="Send">IBC Receive</p>
     
         default:
             return <p className="Send">Send</p>
