@@ -105,7 +105,7 @@ export default class Transactions extends Component{
                         padding: '15px 20px 0 20px'
                     }}>
             <Helmet>
-                <title>Latest Transactions on Colors Explorer | Colors</title>
+                <title>Latest Transactions on Color Explorer | Color</title>
                 <meta name="description" content="See what is happening on Cosmos Hub" />
             </Helmet>
             <Row>

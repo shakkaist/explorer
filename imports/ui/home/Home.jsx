@@ -59,7 +59,7 @@ export default class Home extends Component{
                         padding: '15px 20px 0 20px'
                     }}>
             <Helmet>
-                <title>Colors | Explorer by RNS</title>
+                <title>Color | Explorer by RNS</title>
                 <meta name="description" content="Cosmos is a decentralized network of independent parallel blockchains, each powered by BFT consensus algorithms like Tendermint consensus." />
             </Helmet>
             <Row>

@@ -55,51 +55,109 @@ export const TxIcon = (props) => {
 }
 
 export const Type = (props) => {
-    switch (props.badge){
-        case 'cosmos-sdk/MsgSend':
-            return <p className="Send">Send</p>
-        case "cosmos-sdk/MsgMultiSend":
-            return <p className="MultiSend">Message Multi Send</p>
-            
-            // staking
-        case "cosmos-sdk/MsgCreateValidator":
-            return <p className="Withdraw">Create Validator</p>
-        case "cosmos-sdk/MsgEditValidator":
-            return <p className="Withdraw">Edit Validator</p>
-        case "cosmos-sdk/MsgDelegate":
-            return <p className="Delegate">Delegate</p>
-        case "cosmos-sdk/MsgUndelegate":
-            return <p className="Delegate">Undelegate</p>
-        case "cosmos-sdk/MsgBeginRedelegate":
-            return <p className="Delegate">Redelegate</p>
-            
-            // gov
-        case "cosmos-sdk/MsgSubmitProposal":
-            return <p className="Send">Submit Proposal</p>
-        case "cosmos-sdk/MsgDeposit":
-            return <p className="Send">Deposit</p>
-        case "cosmos-sdk/MsgVote":
-            return <p className="Send">Vote</p>
-            
-            // distribution
-        case "cosmos-sdk/MsgWithdrawValidatorCommission":
-            return <p className="Withdraw">Withdraw Commission</p>
-        case "cosmos-sdk/MsgWithdrawDelegationReward":
-            return <p className="Withdraw">Withdraw</p>
-        case "cosmos-sdk/MsgModifyWithdrawAddress":
-            return <p className="Withdraw">Modify Withdraw Address</p>
-    
-            // slashing
-        case "cosmos-sdk/MsgUnjail":
-            return <p className="Delegate">Unjail</p>
-            
-            // ibc
-        case "cosmos-sdk/IBCTransferMsg":
-            return <p className="Delegate">IBC Transfer</p>
-        case "cosmos-sdk/IBCReceiveMsg":
-            return <p className="Send">IBC Receive</p>
-    
-        default:
-            return <p className="Send">Send</p>
+    if (props.badge = 'cosmos-sdk/MsgSend') {
+        return <p className="Send">Send</p>
     }
+    if (props.badge = 'cosmos-sdk/MsgSend') {
+        return <p className="MultiSend">Multi Send</p>
+    }
+    //Staking
+    if (props.badge = 'cosmos-sdk/MsgCreateValidator') {
+        return <p className="Withdraw">Create Validator</p>
+    }
+    if (props.badge = 'cosmos-sdk/MsgEditValidator') {
+        return <p className="Withdraw">Edit Validator</p>
+    }
+    if (props.badge = 'cosmos-sdk/MsgDelegate') {
+        return <p className="Delegate">Delegate</p>
+    }
+    if (props.badge = 'cosmos-sdk/MsgUndelegate') {
+        return <p className="Delegate">Undelegate</p>
+    }
+    if (props.badge = 'cosmos-sdk/MsgBeginRedelegate') {
+        return <p className="Delegate">Redelegate</p>
+    }
+
+    //Governance
+    if (props.badge = 'cosmos-sdk/MsgSubmitProposal') {
+        return <p className="Send">Submit Proposal</p>
+    }
+    if (props.badge = 'cosmos-sdk/MsgDeposit') {
+        return <p className="Send">Deposit</p>
+    }
+    if (props.badge = 'cosmos-sdk/MsgVote') {
+        return <p className="Send">Vote</p>
+    }
+
+    //Distribution
+    if (props.badge = 'cosmos-sdk/MsgWithdrawValidatorCommission') {
+        return <p className="Withdraw">Withdraw Commission</p>
+    }
+    if (props.badge = 'cosmos-sdk/MsgWithdrawDelegationReward') {
+        return <p className="Withdraw">Withdraw</p>
+    }
+    if (props.badge = 'cosmos-sdk/MsgModifyWithdrawAddress') {
+        return <p className="Withdraw">Modify Withdraw Address</p>
+    }
+
+    //Slashing
+    if (props.badge = 'cosmos-sdk/MsgUnjail') {
+        return <p className="Delegate">Unjail</p>
+    }
+
+    //IBC
+    if (props.badge = 'cosmos-sdk/IBCTransferMsg') {
+        return <p className="Delegate">IBC Transfer</p>
+    }
+    if (props.badge = 'cosmos-sdk/IBCReceiveMsg') {
+        return <p className="Send">IBC Receive</p>
+    }
+
+    // switch (props.badge){
+    //     case "cosmos-sdk/MsgSend":
+    //         return <p className="Send">Send</p>
+    //     case "cosmos-sdk/MsgMultiSend":
+    //         return <p className="MultiSend">Multi Send</p>
+            
+    //         // staking
+    //     case "cosmos-sdk/MsgCreateValidator":
+    //         return <p className="Withdraw">Create Validator</p>
+    //     case "cosmos-sdk/MsgEditValidator":
+    //         return <p className="Withdraw">Edit Validator</p>
+    //     case "cosmos-sdk/MsgDelegate":
+    //         return <p className="Delegate">Delegate</p>
+    //     case "cosmos-sdk/MsgUndelegate":
+    //         return <p className="Delegate">Undelegate</p>
+    //     case "cosmos-sdk/MsgBeginRedelegate":
+    //         return <p className="Delegate">Redelegate</p>
+            
+    //         // gov
+    //     case "cosmos-sdk/MsgSubmitProposal":
+    //         return <p className="Send">Submit Proposal</p>
+    //     case "cosmos-sdk/MsgDeposit":
+    //         return <p className="Send">Deposit</p>
+    //     case "cosmos-sdk/MsgVote":
+    //         return <p className="Send">Vote</p>
+            
+    //         // distribution
+    //     case "cosmos-sdk/MsgWithdrawValidatorCommission":
+    //         return <p className="Withdraw">Withdraw Commission</p>
+    //     case "cosmos-sdk/MsgWithdrawDelegationReward":
+    //         return <p className="Withdraw">Withdraw</p>
+    //     case "cosmos-sdk/MsgModifyWithdrawAddress":
+    //         return <p className="Withdraw">Modify Withdraw Address</p>
+    
+    //         // slashing
+    //     case "cosmos-sdk/MsgUnjail":
+    //         return <p className="Delegate">Unjail</p>
+            
+    //         // ibc
+    //     case "cosmos-sdk/IBCTransferMsg":
+    //         return <p className="Delegate">IBC Transfer</p>
+    //     case "cosmos-sdk/IBCReceiveMsg":
+    //         return <p className="Send">IBC Receive</p>
+    
+    //     default:
+    //         return <p></p>
+    // }
 }

@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Row, Col, Card, Alert, Spinner } from 'reactstrap';
 import { TxIcon, Type } from '../components/Icons.jsx';
-// import Activities from '../components/Activities.jsx';
+import Activities from '../components/Activities.jsx';
 import CosmosErrors from '../components/CosmosErrors.jsx';
 import TimeAgo from '../components/TimeAgo.jsx';
 import numbro from 'numbro';
@@ -13,13 +13,15 @@ export const TransactionRow = (props) => {
     let tx = props.tx;
     // console.log(tx);
     return <Row className={(tx.code)?"tx-info invalid":"tx-info"}>
-        {(!props.blockList)?<Col xs={2} md={1}>{(!tx.tx.value.msg[0].type)?<Type badge />:<Type />}</Col>:''}
-        {/* <Col xs={12} lg={7} className="activity">{(tx.tx.value.msg && tx.tx.value.msg.length >0)?tx.tx.value.msg.map((msg,i) => {
-            return <Card body key={i}><Activities msg={msg} invalid={(!!tx.code)} tags={tx.tags} /></Card>
-        }):''}</Col> */}
+        {(!props.blockList)?<Col xs={2} md={1}>{tx.tx.value.msg[0].type?<Type badge />:<Type />}</Col>:''}
+        
         <Col xs={(!props.blockList)?2:2} md={2}>{(!tx.code)?<TxIcon valid />:<TxIcon />}</Col>
 
-        {(!props.blockList)?<Col xs={2} md={2}>{tx.tx.value.msg[0].value.amount.amount} {tx.tx.value.msg[0].value.amount.denom}</Col>:''}
+        <Col xs={2} lg={2} className="activity">{(tx.tx.value.msg && tx.tx.value.msg.length >0)?tx.tx.value.msg.map((msg,i) => {
+            return <Activities msg={msg} invalid={(!!tx.code)} tags={tx.tags} />
+        }):''}</Col>
+
+        {/* {(!props.blockList)?<Col xs={2} md={2}>{tx.tx.value.msg[0].value.amount[0].amount} {tx.tx.value.msg[0].value.amount[0].denom}</Col>:''} */}
 
         <Col xs={(!props.blockList)?2:2} md={(!props.blockList)?2:2} className="fee"><i className="material-icons d-lg-none">monetization_on</i> {tx.tx.value.fee.amount?tx.tx.value.fee.amount.map((fee,i) => {
             return <span className="text-nowrap" key={i}>{numbro(fee.amount).format(0,0)} stake</span>
@@ -40,5 +42,3 @@ export const TransactionRow = (props) => {
 
     </Row>
 }
-false
-

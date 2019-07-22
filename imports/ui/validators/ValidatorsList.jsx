@@ -97,8 +97,8 @@ export default class Validators extends Component{
                         padding: '15px 20px 0 20px'
                     }}>
             <Helmet>
-                <title>Colors | Explorer by RNS</title>
-                <meta name="description" content="Here is a list of Colors Validators" />
+                <title>Color | Explorer by RNS</title>
+                <meta name="description" content="Here is a list of Color Validators" />
             </Helmet>
             <Row>
                 <Col lg={3} xs={12}><h1 className="d-none d-lg-block">{title}</h1></Col>

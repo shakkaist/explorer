@@ -37,7 +37,7 @@ export default class Distribution extends Component{
                             padding: '15px 20px 15px 20px'
                         }}>
             <Helmet>
-                <title>Voting Power Distribution on Colors Explorer | Colors</title>
+                <title>Voting Power Distribution on Color Explorer | Color</title>
                 <meta name="description" content="We would like to keep track how voting power are distributed over time among validators." />
             </Helmet>
             <Row>

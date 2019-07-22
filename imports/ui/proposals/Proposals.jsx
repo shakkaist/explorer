@@ -47,8 +47,8 @@ export default class Proposals extends Component{
                             padding: '15px 20px 0 20px'
                         }}>
             <Helmet>
-                <title>Proposals on Colors Explorer | Colors</title>
-                <meta name="description" content="Colors Explorer incorporates on-chain governance. Come to see how on-chain governance can be achieved on Colors." />
+                <title>Proposals on Color Explorer | Color</title>
+                <meta name="description" content="Color Explorer incorporates on-chain governance. Come to see how on-chain governance can be achieved on Color." />
             </Helmet>
             <Row>
                 <Col md={3} xs={12}><h1 className="d-none d-lg-block"><T>proposals.proposals</T></h1></Col>

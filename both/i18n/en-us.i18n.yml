@@ -21,7 +21,7 @@ common:
     fullStop: '.'
     searchPlaceholder: 'Search with tx hash / block height / address'
 navbar:
-    siteName: 'Colors'
+    siteName: 'Color'
     version: 'beta'
     validators: 'Validators'
     blocks: 'Blocks'

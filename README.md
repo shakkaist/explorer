@@ -1,11 +1,11 @@
-# Colors :sparkles:
-Colors Explorer for Colors
+# Color :sparkles:
+Color Explorer for Color
 
 ## Projects running on mainnets
-[Colors Explorer with Colors](http://ec2-3-15-152-52.us-east-2.compute.amazonaws.com:3000/)
+[Color Explorer with Color](http://ec2-3-15-152-52.us-east-2.compute.amazonaws.com:3000/)
 
 
-## How to run Colors
+## How to run Color
 
 1. Copy `settings.json.default` to `settings.json`.
 2. Update the RPC and LCD URLs.
@@ -31,7 +31,7 @@ It will create a packaged Node JS tarball at `../output`. Deploy that packaged N
 ---
 ## Donations :pray:
 
-Colors is always free and open. Anyone can use to monitor available Colors hub or zones, or port to your own chain built with Colors SDK. We welcome any supports to help us improve this project.
+Color is always free and open. Anyone can use to monitor available Color hub or zones, or port to your own chain built with Color SDK. We welcome any supports to help us improve this project.
 
 ATOM: `cosmos1n67vdlaejpj3uzswr9qapeg76zlkusj5k875ma`\
 BTC: `1HrTuvS83VoUVA79wTifko69ziWTjEXzQS`\

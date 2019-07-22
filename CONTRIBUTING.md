@@ -1,12 +1,12 @@
-Colors is always free and open. We welcome everyone to contribute to Colors as in contributing to the Colors Network.
+Color is always free and open. We welcome everyone to contribute to Color as in contributing to the Color Network.
 
 You can contribute in the following ways:
 
 ## Submit issues
-If you find any errors, bugs, questions, feature requests when you are using Colors (on [Colors](http://ec2-3-15-152-52.us-east-2.compute.amazonaws.com:3000/) please do not hestitate to submit any [issues](https://github.com/). Any bug report and comments are welcome. We are always open to learn more about how this application can help Cosmos users.
+If you find any errors, bugs, questions, feature requests when you are using Color (on [Color](http://ec2-3-15-152-52.us-east-2.compute.amazonaws.com:3000/) please do not hestitate to submit any [issues](https://github.com/). Any bug report and comments are welcome. We are always open to learn more about how this application can help Cosmos users.
 
 ## Create Pull Request
-If you are generous enough and can resolve some issues Colors is experiencing, please build everything in your own branch and create a Pull Request to us. We will review and merge if necessary. 
+If you are generous enough and can resolve some issues Color is experiencing, please build everything in your own branch and create a Pull Request to us. We will review and merge if necessary. 
 
 If it's just some simple errors like typo or missing a variable, etc, please create a Pull Request directly. If it's a feature change or some severe issues, please create an issue before creating a Pull Request.
 

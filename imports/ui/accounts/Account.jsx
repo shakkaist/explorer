@@ -140,7 +140,7 @@ export default class AccountDetails extends Component{
                         padding: '15px 20px 0 20px'
                     }}>
                 <Helmet>
-                    <title>Account Details of {this.state.address} on Colors Explorer | Colors</title>
+                    <title>Account Details of {this.state.address} on Color Explorer | Color</title>
                     <meta name="description" content={"Account Details of "+this.state.address+" on Cosmos Hub"} />
                 </Helmet>
                 <Row>

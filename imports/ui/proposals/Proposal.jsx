@@ -256,7 +256,7 @@ export default class Proposal extends Component{
                 const proposalId = Number(this.props.proposal.proposalId), maxProposalId = Number(this.props.proposalCount);
                 return <div>
                     <Helmet>
-                        <title>{this.props.proposal.proposal_content.value.title} | Colors</title>
+                        <title>{this.props.proposal.proposal_content.value.title} | Color</title>
                         <meta name="description" content={this.props.proposal.proposal_content.value.description} />
                     </Helmet>
                     <div className="proposal bg-light">

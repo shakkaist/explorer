@@ -23,7 +23,7 @@ export default class Footer extends React.Component {
                     <span className="text-muted">All rights reserved &copy;{moment().format('YYYY')}</span>
                     <Nav className="ml-auto" navbar>
                         <NavItem>
-                            <NavLink className="white">Colors Network</NavLink>
+                            <NavLink className="white">Color Platform</NavLink>
                         </NavItem>
                     </Nav>
                 </Navbar>

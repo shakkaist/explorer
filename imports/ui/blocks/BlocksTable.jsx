@@ -97,7 +97,7 @@ export default class BlocksTable extends Component {
                         padding: '15px 20px 0 20px'
                     }}>
             <Helmet>
-                <title>Latest Blocks on Colors Explorer | Colors</title>
+                <title>Latest Blocks on Color Explorer | Color</title>
                 <meta name="description" content="Latest blocks committed by validators on Cosmos Hub" />
             </Helmet>
             <Row>

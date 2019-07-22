@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Container, Row, Col, Card, CardBody, Alert, Spinner } from 'reactstrap';
 import { TxIcon } from '../components/Icons.jsx';
-import Activities from '../components/Activities.jsx';
+// import Activities from '../components/Activities.jsx';
+import Activities from '../components/TransactionActivities.jsx';
 import CosmosErrors from '../components/CosmosErrors.jsx';
 import { Link } from 'react-router-dom';
 import { Markdown } from 'react-showdown';
@@ -30,7 +31,7 @@ export default class Transaction extends Component{
                 let tx = this.props.transaction;
                 return <Container id="transaction" className="paddingleft">
                     <Helmet>
-                        <title>Transaction {tx.txhash} on Colors Explorer | Colors</title>
+                        <title>Transaction {tx.txhash} on Color Explorer | Color</title>
                         <meta name="description" content={"Details of transaction "+tx.txhash} />
                     </Helmet>
                     <h4><T>transactions.transaction</T> {(!tx.code)?<TxIcon valid />:<TxIcon />}</h4>
