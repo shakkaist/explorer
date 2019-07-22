@@ -63,7 +63,7 @@ export default class AccountDelegations extends Component{
         }
         else{
             return <Card>
-                <CardHeader>{(this.state.numDelegations > 0)?this.state.numDelegations:<T>accounts.no</T>} <T>accounts.delegation</T>{(this.state.numDelegations>1)?<T>accounts.plural</T>:''}</CardHeader>
+                <CardHeader className="backgroundcolor">{(this.state.numDelegations > 0)?this.state.numDelegations:<T>accounts.no</T>} <T>accounts.delegation</T>{(this.state.numDelegations>1)?<T>accounts.plural</T>:''}</CardHeader>
                 {(this.state.numDelegations > 0)?<CardBody className="list overflow-auto">
                     <Container fluid>
                         <Row className="header text-nowrap d-none d-lg-flex">

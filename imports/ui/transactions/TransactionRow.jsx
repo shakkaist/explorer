@@ -19,7 +19,7 @@ export const TransactionRow = (props) => {
         }):''}</Col> */}
         <Col xs={(!props.blockList)?2:2} md={2}>{(!tx.code)?<TxIcon valid />:<TxIcon />}</Col>
 
-        {(!props.blockList)?<Col xs={2} md={2}>{tx.tx.value.msg[0].value.amount[0].amount} {tx.tx.value.msg[0].value.amount[0].denom}</Col>:''}
+        {(!props.blockList)?<Col xs={2} md={2}>{console.log(tx.tx.value.msg[0].value.amount)} {console.log(tx.tx.value.msg[0].value.amount[0].denom)}</Col>:''}
 
         <Col xs={(!props.blockList)?2:2} md={(!props.blockList)?2:2} className="fee"><i className="material-icons d-lg-none">monetization_on</i> {tx.tx.value.fee.amount?tx.tx.value.fee.amount.map((fee,i) => {
             return <span className="text-nowrap" key={i}>{numbro(fee.amount).format(0,0)} stake</span>
@@ -40,3 +40,4 @@ export const TransactionRow = (props) => {
 
     </Row>
 }
+false
