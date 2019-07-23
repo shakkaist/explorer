@@ -14,11 +14,11 @@ export const TransactionRow = (props) => {
     let tx = props.tx;
     // console.log(tx);
     return <Row className={(tx.code)?"tx-info invalid":"tx-info"}>
-        <Col xs={2} md={1}>{(tx.tx.value.msg && tx.tx.value.msg.length >0)?tx.tx.value.msg.map((msg,i) => {
+        <Col xs={2} md={2}>{(tx.tx.value.msg && tx.tx.value.msg.length >0)?tx.tx.value.msg.map((msg,i) => {
             return <p key={i}><ButtonActivities msg={msg} invalid={(!!tx.code)} tags={tx.tags} /></p>
         }):''}</Col>
         
-        <Col xs={(!props.blockList)?3:2} md={2}>{(!tx.code)?<TxIcon valid />:<TxIcon />}</Col>
+        <Col xs={(!props.blockList)?3:2} md={1}>{(!tx.code)?<TxIcon valid />:<TxIcon />}</Col>
 
         <Col xs={2} md={2}>{(tx.tx.value.msg && tx.tx.value.msg.length >0)?tx.tx.value.msg.map((msg) => {
             return <Activities msg={msg} invalid={(!!tx.code)} tags={tx.tags} />

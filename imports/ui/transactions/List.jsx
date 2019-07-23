@@ -44,8 +44,8 @@ export default class Transactions extends Component{
         else{
             return <div className="transactions-list">
                 <Row className="header text-nowrap d-none d-lg-flex">
-                    <Col xs={2} md={1}><i className="material-icons">merge_type</i> <span className="d-none d-md-inline-block"><T>Type</T></span></Col>
-                    <Col xs={2} md={2} className="text-nowrap"><i className="material-icons">check_circle</i> <span className="d-none d-lg-inline-block"><T>Result</T></span></Col>
+                    <Col xs={2} md={2}><i className="material-icons">merge_type</i> <span className="d-none d-md-inline-block"><T>Type</T></span></Col>
+                    <Col xs={1} md={1}><i className="material-icons">check_circle</i> <span className="d-none d-lg-inline-block"><T>Result</T></span></Col>
                     <Col xs={2} md={2}><i className="material-icons">attach_money</i> <span className="d-none d-md-inline-block"><T>Amount</T></span></Col>
                     <Col xs={2} md={2}><i className="material-icons">monetization_on</i> <span className="d-none d-md-inline-block"><T>transactions.fee</T></span></Col>
                     <Col xs={2} md={2}><i className="fas fa-database"></i> <span className="d-none d-md-inline-block"><T>common.height</T></span></Col>
