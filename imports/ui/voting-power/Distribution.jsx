@@ -54,7 +54,7 @@ export default class Distribution extends Component{
                 </Col>
             </Row>
         </div>
-        <SideNav className="sidenav" onSelect={this.onSelect} onToggle={this.onToggle}>
+        <SideNav className="sidenav position-fixed" onSelect={this.onSelect} onToggle={this.onToggle}>
                 <SideNav.Toggle />
                 <SideNav.Nav selected={selected} defaultSelected="voting-power-distribution">
                     <NavItem eventKey="dashboard" onClick={ e => this.props.history.push("/") }>

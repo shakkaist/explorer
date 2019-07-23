@@ -153,7 +153,7 @@ export default class Validators extends Component{
                 </Col>
             </Row>
         </div>
-            <SideNav className="sidenav" onSelect={this.onSelect} onToggle={this.onToggle}>
+            <SideNav className="sidenav position-fixed" onSelect={this.onSelect} onToggle={this.onToggle}>
                 <SideNav.Toggle />
                 <SideNav.Nav selected={selected} defaultSelected="validators">
                     <NavItem eventKey="dashboard" onClick={ e => this.props.history.push("/") }>

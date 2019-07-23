@@ -61,7 +61,7 @@ export default class ChainStates extends Component{
     render(){
         return <Card className="d-lg-inline-block color">
             <CardHeader>
-                <Row className="text-nowrap white">
+                <Row className="white">
                     <Col xs={4} md="auto"><small><span><T>chainStates.price</T>:</span> <strong>{this.state.price}</strong></small></Col>
                     <Col xs={8} md="auto"><small><span><T>chainStates.marketCap</T>:</span> <strong>{this.state.marketCap}</strong></small></Col>
                     <Col xs={4} md="auto"><small><span><T>chainStates.inflation</T>:</span> <strong>{this.state.inflation}</strong></small></Col>

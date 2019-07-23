@@ -161,6 +161,10 @@ table.proposal-list {
     white-space: nowrap;
 }
 
+table.random-validators {
+    white-space: unset
+}
+
 table#block-table td,
 table.random-validators td,
 table.validator-list td,
@@ -677,6 +681,11 @@ div#voting-power-dist .card{
     }
     .card-body.list{
         padding: 0;
+    }
+}
+@media only screen and (max-width: 500px){
+    .navbar.fixed-top{
+        background-size: cover
     }
 }
 
