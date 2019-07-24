@@ -168,10 +168,10 @@ Meteor.methods({
                 },
                 mint: genesis.app_state.mint,
                 distr: {
-                    communityTax: genesis.app_state.distribution.community_tax,
-                    baseProposerReward: genesis.app_state.distribution.base_proposer_reward,
-                    bonusProposerReward: genesis.app_state.distribution.bonus_proposer_reward,
-                    withdrawAddrEnabled: genesis.app_state.distribution.withdraw_addr_enabled
+                    communityTax: genesis.app_state.distr.community_tax,
+                    baseProposerReward: genesis.app_state.distr.base_proposer_reward,
+                    bonusProposerReward: genesis.app_state.distr.bonus_proposer_reward,
+                    withdrawAddrEnabled: genesis.app_state.distr.withdraw_addr_enabled
                 },
                 gov: {
                     startingProposalId: genesis.app_state.gov.starting_proposal_id,
