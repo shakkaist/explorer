@@ -136,7 +136,7 @@ export default class Transactions extends Component{
                 <SideNav.Nav selected={selected} defaultSelected="transactions">
                     <NavItem eventKey="dashboard" onClick={ e => this.props.history.push("/") }>
                         <NavIcon>
-                            <i className="fa fa-fw fa-th-large" style={{ fontSize: '1.75em', color: 'black' }} />
+                            <i className="fa fa-fw fa-th-large" style={{ fontSize: '1.5em', color: 'black' }} />
                         </NavIcon>
                         <NavText>
                             Dashboard
@@ -145,7 +145,7 @@ export default class Transactions extends Component{
                     </NavItem>
                     <NavItem eventKey="validators" onClick={ e => this.props.history.push("/validators") }>
                         <NavIcon>
-                            <i className="fa fa-fw fa-signal" style={{ fontSize: '1.75em', color: 'black' }} />
+                            <i className="fa fa-fw fa-signal" style={{ fontSize: '1.5em', color: 'black' }} />
                         </NavIcon>
                         <NavText>
                             Validators
@@ -154,7 +154,7 @@ export default class Transactions extends Component{
                     </NavItem>
                     <NavItem eventKey="blocks" onClick={ e => this.props.history.push("/blocks") }>
                         <NavIcon>
-                            <i className="fa fa-fw fa-cube" style={{ fontSize: '1.75em', color: 'black' }} />
+                            <i className="fa fa-fw fa-cube" style={{ fontSize: '1.5em', color: 'black' }} />
                         </NavIcon>
                         <NavText>
                             Blocks
@@ -163,7 +163,7 @@ export default class Transactions extends Component{
                     </NavItem>
                     <NavItem eventKey="transactions" onClick={ e => this.props.history.push("/transactions") }>
                         <NavIcon>
-                            <i className="fa fa-fw fa-random" style={{ fontSize: '1.75em', color: 'black' }} />
+                            <i className="fa fa-fw fa-random" style={{ fontSize: '1.5em', color: 'black' }} />
                         </NavIcon>
                         <NavText>
                             Transactions
@@ -172,7 +172,7 @@ export default class Transactions extends Component{
                     </NavItem>
                     <NavItem eventKey="proposals" onClick={ e => this.props.history.push("/proposals") }>
                         <NavIcon>
-                            <i className="fa fa-fw fa-list-ul" style={{ fontSize: '1.75em', color: 'black' }} />
+                            <i className="fa fa-fw fa-list-ul" style={{ fontSize: '1.5em', color: 'black' }} />
                         </NavIcon>
                         <NavText>
                             Proposals
@@ -181,7 +181,7 @@ export default class Transactions extends Component{
                     </NavItem>
                     <NavItem eventKey="voting-power-distribution" onClick={ e => this.props.history.push("/voting-power-distribution") }>
                         <NavIcon>
-                            <i className="fa fa-fw fa-bolt" style={{ fontSize: '1.75em', color: 'black'}} />
+                            <i className="fa fa-fw fa-bolt" style={{ fontSize: '1.5em', color: 'black'}} />
                         </NavIcon>
                         <NavText>
                             Voting Power

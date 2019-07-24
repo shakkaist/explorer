@@ -169,20 +169,17 @@ export default class ChainStatus extends React.Component {
                                         <i className="material-icons">more_vert</i>
                                     </DropdownToggle>
                                     <DropdownMenu>
-                                        <DropdownItem onClick={(e) => this.handleSwitchBlockTime("", e)}><T>chainStatus.allTime</T></DropdownItem>
-                                        {this.props.status.lastMinuteBlockTime?<DropdownItem onClick={(e) => this.handleSwitchBlockTime("m", e)}><T>chainStatus.lastMinute</T></DropdownItem>:''}
-                                        {this.props.status.lastHourBlockTime?<DropdownItem onClick={(e) => this.handleSwitchBlockTime("h", e)}><T>chainStatus.lastHour</T></DropdownItem>:''}
-                                        {this.props.status.lastDayBlockTime?<DropdownItem onClick={(e) => this.handleSwitchBlockTime("d", e)}><T>chainStatus.lastDay</T> </DropdownItem>:''}
+                                        <DropdownItem onClick={(e) => this.handleSwitchVotingPower("", e)}><T>chainStatus.now</T></DropdownItem>
+                                        {this.props.status.lastHourVotingPower?<DropdownItem onClick={(e) => this.handleSwitchVotingPower("h", e)}><T>chainStatus.lastHour</T></DropdownItem>:''}
+                                        {this.props.status.lastDayVotingPower?<DropdownItem onClick={(e) => this.handleSwitchVotingPower("d", e)}><T>chainStatus.lastDay</T></DropdownItem>:''}
                                     </DropdownMenu>
                                 </UncontrolledDropdown>
-                                <CardTitle><T>chainStatus.averageBlockTime</T> ({this.state.blockTimeText})</CardTitle>
-                                <CardText>
-                                    <span className="display-4 value text-primary">{this.state.averageBlockTime}</span><T>chainStatus.seconds</T>
-                                </CardText>   
+                                <CardTitle><T>chainStatus.onlineVotingPower</T> ({this.state.votingPowerText})</CardTitle>
+                                <CardText><span className="display-4 value text-primary">{this.state.votingPower}</span><T percent={numbro(this.state.bondedTokens/(this.state.bondedTokens+this.state.notBondedTokens)).format("0.00%")} totalStakes={numbro((this.state.bondedTokens+this.state.notBondedTokens)/Meteor.settings.public.stakingFraction).format("0.00a")} denom={Meteor.settings.public.stakingDenom}>chainStatus.fromTotalStakes</T></CardText>   
                             </Card>
                         </Col>
-                        </Row>
-                        <Row className="status text-center">
+                    </Row>
+                    <Row className="status text-center">
                         <Col lg={6}>
                             <Card body className="shade">
                                 <CardTitle><T>chainStatus.activeValidators</T></CardTitle>
@@ -196,13 +193,16 @@ export default class ChainStatus extends React.Component {
                                         <i className="material-icons">more_vert</i>
                                     </DropdownToggle>
                                     <DropdownMenu>
-                                        <DropdownItem onClick={(e) => this.handleSwitchVotingPower("", e)}><T>chainStatus.now</T></DropdownItem>
-                                        {this.props.status.lastHourVotingPower?<DropdownItem onClick={(e) => this.handleSwitchVotingPower("h", e)}><T>chainStatus.lastHour</T></DropdownItem>:''}
-                                        {this.props.status.lastDayVotingPower?<DropdownItem onClick={(e) => this.handleSwitchVotingPower("d", e)}><T>chainStatus.lastDay</T></DropdownItem>:''}
+                                        <DropdownItem onClick={(e) => this.handleSwitchBlockTime("", e)}><T>chainStatus.allTime</T></DropdownItem>
+                                        {this.props.status.lastMinuteBlockTime?<DropdownItem onClick={(e) => this.handleSwitchBlockTime("m", e)}><T>chainStatus.lastMinute</T></DropdownItem>:''}
+                                        {this.props.status.lastHourBlockTime?<DropdownItem onClick={(e) => this.handleSwitchBlockTime("h", e)}><T>chainStatus.lastHour</T></DropdownItem>:''}
+                                        {this.props.status.lastDayBlockTime?<DropdownItem onClick={(e) => this.handleSwitchBlockTime("d", e)}><T>chainStatus.lastDay</T> </DropdownItem>:''}
                                     </DropdownMenu>
                                 </UncontrolledDropdown>
-                                <CardTitle><T>chainStatus.onlineVotingPower</T> ({this.state.votingPowerText})</CardTitle>
-                                <CardText><span className="display-4 value text-primary">{this.state.votingPower}</span><T percent={numbro(this.state.bondedTokens/(this.state.bondedTokens+this.state.notBondedTokens)).format("0.00%")} totalStakes={numbro((this.state.bondedTokens+this.state.notBondedTokens)/Meteor.settings.public.stakingFraction).format("0.00a")} denom={Meteor.settings.public.stakingDenom}>chainStatus.fromTotalStakes</T></CardText>   
+                                <CardTitle><T>chainStatus.averageBlockTime</T> ({this.state.blockTimeText})</CardTitle>
+                                <CardText>
+                                    <span className="display-4 value text-primary">{this.state.averageBlockTime}</span><T>chainStatus.seconds</T>
+                                </CardText>   
                             </Card>
                         </Col>
                     </Row>

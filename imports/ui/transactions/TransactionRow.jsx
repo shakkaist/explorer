@@ -14,17 +14,17 @@ export const TransactionRow = (props) => {
     let tx = props.tx;
     // console.log(tx);
     return <Row className={(tx.code)?"tx-info invalid":"tx-info"}>
-        <Col xs={2} md={2}>{(tx.tx.value.msg && tx.tx.value.msg.length >0)?tx.tx.value.msg.map((msg,i) => {
+        <Col xs={(!props.blockList)?5:2} md={(!props.blockList)?2:2}>{(tx.tx.value.msg && tx.tx.value.msg.length >0)?tx.tx.value.msg.map((msg,i) => {
             return <p key={i}><ButtonActivities msg={msg} invalid={(!!tx.code)} tags={tx.tags} /></p>
         }):''}</Col>
         
         <Col xs={(!props.blockList)?3:2} md={1}>{(!tx.code)?<TxIcon valid />:<TxIcon />}</Col>
 
-        <Col xs={2} md={2}>{(tx.tx.value.msg && tx.tx.value.msg.length >0)?tx.tx.value.msg.map((msg) => {
+        <Col xs={(!props.blockList)?3:2} md={(!props.blockList)?2:2}>{(tx.tx.value.msg && tx.tx.value.msg.length >0)?tx.tx.value.msg.map((msg) => {
             return <Activities msg={msg} invalid={(!!tx.code)} tags={tx.tags} />
         }):''}</Col>
 
-        <Col xs={(!props.blockList)?2:2} md={(!props.blockList)?2:2} className="fee"><i className="material-icons d-lg-none">monetization_on</i> {tx.tx.value.fee.amount?tx.tx.value.fee.amount.map((fee,i) => {
+        <Col xs={(!props.blockList)?3:2} md={(!props.blockList)?2:2} className="fee"><i className="material-icons d-lg-none">monetization_on</i> {tx.tx.value.fee.amount?tx.tx.value.fee.amount.map((fee,i) => {
             return <span key={i}>{numbro(fee.amount).format(0,0)} stake</span>
         }):<span>No fee</span>}</Col>
         {(!props.blockList)?<Col xs={2} md={2}><i className="fas fa-database d-lg-none"></i> <Link to={"/blocks/"+tx.height}>{numbro(tx.height).format("0,0")}</Link></Col>:''}

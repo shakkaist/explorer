@@ -127,7 +127,7 @@ div.validator-list div.header div:not(.status){
 
 div.validator-list div.validator-info div.data{
     white-space: nowrap;
-    overflow: hidden;
+    /* overflow: hidden; */
     text-overflow: ellipsis;
 }
 
@@ -149,7 +149,7 @@ div.validator-list div.header div.last-seen span.d-md-none{
 
 div#block-table,
 #transactions div.transactions-list{
-    margin-top: 0.5em;
+    margin-top: 2.5em;
 }
 
 table#block-table,
@@ -605,11 +605,11 @@ div#voting-power-dist .card{
         padding-right: 1rem;
     }
 
-    #validator-list div.validator-list .data.proposer-priority,
+    /* #validator-list div.validator-list .data.proposer-priority,
     #validator-list div.validator-list .data.voting-power,
     #validator-list div.validator-list .header .voting-power{
         text-align: right;
-    }
+    } */
 
     #validator-list div.validator-list .card.card-body,
     .proposal .tally-result-table .card.card-body{
@@ -621,7 +621,7 @@ div#voting-power-dist .card{
         -webkit-box-shadow: none;
         box-shadow: none;
     }
-
+    
     #validator-list div.validator-list div.header,
     .proposal .tally-result-table div.header{
         padding-top: 0.3rem;
@@ -633,6 +633,7 @@ div#voting-power-dist .card{
     div.validator-list div.validator-info div.data:not(.counter){
         padding-left: 0;
         padding-right: 5px;
+        overflow: hidden;
     }
 
     div.validator-list div.validator-info,
