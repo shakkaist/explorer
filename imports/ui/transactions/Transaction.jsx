@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Row, Col, Card, CardBody, Alert, Spinner } from 'reactstrap';
 import { TxIcon } from '../components/Icons.jsx';
-// import Activities from '../components/Activities.jsx';
 import Activities from '../components/TransactionActivities.jsx';
 import CosmosErrors from '../components/CosmosErrors.jsx';
 import { Link } from 'react-router-dom';

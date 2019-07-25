@@ -2777,16 +2777,16 @@
  
  .btn-primary {
      color: #fff;
-     background: #bd081c -webkit-gradient(linear, left top, left bottom, from(#c72d3e), to(#bd081c)) repeat-x;
-     background: #bd081c linear-gradient(180deg, #c72d3e, #bd081c) repeat-x;
-     border-color: #bd081c
+     background: #2f2d3f -webkit-gradient(linear, left top, left bottom, from(#2f2d3f), to(#2f2d3f)) repeat-x;
+     background: #2f2d3f linear-gradient(180deg, #2f2d3f, #2f2d3f) repeat-x;
+     border-color: #2f2d3f
  }
  
  .btn-primary:hover {
-     color: #fff;
-     background: #980617 -webkit-gradient(linear, left top, left bottom, from(#a82c39), to(#980617)) repeat-x;
-     background: #980617 linear-gradient(180deg, #a82c39, #980617) repeat-x;
-     border-color: #8c0615
+     color: #59ccc8 !important;
+     background: #2f2637 -webkit-gradient(linear, left top, left bottom, from(#2f2637), to(#2f2637)) repeat-x;
+     background: #2f2637 linear-gradient(180deg, #2f2637, #2f2637) repeat-x;
+     border-color: #2f2637
  }
  
  .btn-primary:focus,
@@ -2807,9 +2807,9 @@
  .btn-primary:not(:disabled):not(.disabled).active,
  .show>.btn-primary.dropdown-toggle {
      color: #fff;
-     background-color: #8c0615;
+     background-color: #2f2637;
      background-image: none;
-     border-color: #800513
+     border-color: #2f2637
  }
  
  .btn-primary:not(:disabled):not(.disabled):active:focus,
@@ -3318,14 +3318,14 @@
  }
  
  .btn-outline-danger {
-     color: #e51c23;
-     border-color: #e51c23
+     color: #2f2637;
+     border-color: #2f2637
  }
  
  .btn-outline-danger:hover {
      color: #fff;
-     background-color: #e51c23;
-     border-color: #e51c23
+     background-color: #2f2d3f;
+     border-color: #2f2d3f
  }
  
  .btn-outline-danger:focus,
@@ -3336,7 +3336,7 @@
  
  .btn-outline-danger.disabled,
  .btn-outline-danger:disabled {
-     color: #e51c23;
+     color: #59ccc8;
      background-color: transparent
  }
  
@@ -11120,7 +11120,7 @@
  
  .btn-primary:hover,
  .btn-primary:active:hover {
-     background-color: #a00718
+     background-color: #2f2637
  }
  
  .btn-primary:active {
