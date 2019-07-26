@@ -64,7 +64,7 @@ export default class Block extends Component{
                                 <Col md={4} className="label"><T>common.hash</T></Col>
                                 <Col md={8} className="value address">{block.hash}</Col>
                                 <Col md={4} className="label"><T>blocks.proposer</T></Col>
-                                <Col md={8} className="value"><Link to={"/validator/"+((proposer)?proposer.operator_address:'')}><Avatar moniker={moniker} identity={identity} address={block.proposerAddress} list={true} /> {moniker}</Link></Col>
+                                <Col md={8} className="value"><Link to={"/validator/"+((proposer)?proposer.address:'')}><Avatar moniker={moniker} identity={identity} address={block.proposerAddress} list={true} /> {moniker}</Link></Col>
                                 <Col md={4} className="label"><T>blocks.numOfTransactions</T></Col>
                                 <Col md={8} className="value">{numbro(block.transNum).format("0,0")}</Col>
                                 <Col md={4} className="label"><T>common.time</T></Col>
