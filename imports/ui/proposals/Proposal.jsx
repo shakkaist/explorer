@@ -310,7 +310,7 @@ export default class Proposal extends Component{
                                     <Col xs={6} sm={5} md={4}><VoteIcon vote="yes" /> Yes</Col>
                                     <Col xs={5} sm={6} md={7} className="tally-result-value">{this.state.tally?numbro(this.state.tally.yes).format("0,0"):''}</Col>
                                     <Col xs={1} onClick={(e) => this.handleClick(1,e)}><i className="material-icons">{this.state.open === 1 ? 'arrow_drop_down' : 'arrow_left'}</i></Col>
-                                    <Col xs={12}>href
+                                    <Col xs={12}>
                                         {this.renderTallyResultDetail(1, 'Yes')}
                                     </Col>
                                 </Row>

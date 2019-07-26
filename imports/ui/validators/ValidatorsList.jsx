@@ -156,7 +156,7 @@ export default class Validators extends Component{
             <SideNav className="sidenav position-fixed" onSelect={this.onSelect} onToggle={this.onToggle}>
                 <SideNav.Toggle />
                 <SideNav.Nav selected={selected} defaultSelected="validators">
-                    <NavItem eventKey="dashboard" onClick={ e => this.props.history.push("/") }>
+                    <NavItem eventKey="dashboard" onClick={ e => this.props.history.push("/") } title="Dashboard">
                         <NavIcon>
                             <i className="fa fa-fw fa-th-large" style={{ fontSize: '1.5em', color: 'black' }} />
                         </NavIcon>
@@ -165,7 +165,7 @@ export default class Validators extends Component{
                         </NavText>
                         
                     </NavItem>
-                    <NavItem eventKey="validators" onClick={ e => this.props.history.push("/validators") }>
+                    <NavItem eventKey="validators" onClick={ e => this.props.history.push("/validators") } title="Validators">
                         <NavIcon>
                             <i className="fa fa-fw fa-signal" style={{ fontSize: '1.5em', color: 'black' }} />
                         </NavIcon>
@@ -174,7 +174,7 @@ export default class Validators extends Component{
                         </NavText>
                         
                     </NavItem>
-                    <NavItem eventKey="blocks" onClick={ e => this.props.history.push("/blocks") }>
+                    <NavItem eventKey="blocks" onClick={ e => this.props.history.push("/blocks") } title="Blocks">
                         <NavIcon>
                             <i className="fa fa-fw fa-cube" style={{ fontSize: '1.5em', color: 'black' }} />
                         </NavIcon>
@@ -183,7 +183,7 @@ export default class Validators extends Component{
                         </NavText>
                         
                     </NavItem>
-                    <NavItem eventKey="transactions" onClick={ e => this.props.history.push("/transactions") }>
+                    <NavItem eventKey="transactions" onClick={ e => this.props.history.push("/transactions") } title="Transactions">
                         <NavIcon>
                             <i className="fa fa-fw fa-random" style={{ fontSize: '1.5em', color: 'black' }} />
                         </NavIcon>
@@ -192,7 +192,7 @@ export default class Validators extends Component{
                         </NavText>
                         
                     </NavItem>
-                    <NavItem eventKey="proposals" onClick={ e => this.props.history.push("/proposals") }>
+                    <NavItem eventKey="proposals" onClick={ e => this.props.history.push("/proposals") } title="Proposals">
                         <NavIcon>
                             <i className="fa fa-fw fa-list-ul" style={{ fontSize: '1.5em', color: 'black' }} />
                         </NavIcon>
@@ -201,7 +201,7 @@ export default class Validators extends Component{
                         </NavText>
                         
                     </NavItem>
-                    <NavItem eventKey="voting-power-distribution" onClick={ e => this.props.history.push("/voting-power-distribution") }>
+                    <NavItem eventKey="voting-power-distribution" onClick={ e => this.props.history.push("/voting-power-distribution") } title="Voting Power">
                         <NavIcon>
                             <i className="fa fa-fw fa-bolt" style={{ fontSize: '1.5em', color: 'black'}} />
                         </NavIcon>

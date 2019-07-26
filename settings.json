@@ -1,6 +1,6 @@
 {
     "public":{
-        "chainName": "colorchain",
+        "chainName": "Dashboard",
         "chainId": "chain-BYIp0m",
         "gtm": "{Add your Google Tag Manager ID here}",
         "slashingWindow": 10000,
