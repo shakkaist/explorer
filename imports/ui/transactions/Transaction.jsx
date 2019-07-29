@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Container, Row, Col, Card, CardBody, Alert, Spinner } from 'reactstrap';
 import { TxIcon } from '../components/Icons.jsx';
-import Activities from '../components/TransactionActivities.jsx';
-import CosmosErrors from '../components/CosmosErrors.jsx';
+import TransactionActivities from '../components/TransactionActivities.jsx';
+import ColorErrors from '../components/ColorErrors.jsx';
 import { Link } from 'react-router-dom';
 import { Markdown } from 'react-showdown';
 import numbro from 'numbro';
@@ -17,7 +17,7 @@ export default class Transaction extends Component{
         let showdown  = require('showdown');
         showdown.setFlavor('github');
     }
-
+  
     render(){
         if (this.props.loading){
             return <Container id="transaction">
@@ -36,7 +36,7 @@ export default class Transaction extends Component{
                     <h4><T>transactions.transaction</T> {(!tx.code)?<TxIcon valid />:<TxIcon />}</h4>
                     {(tx.code)?<Row><Col xs={{size:12, order:"last"}} className="error">
                         <Alert color="danger">
-                            <CosmosErrors 
+                            <ColorErrors 
                                 code={tx.code}
                                 logs={tx.logs}
                                 gasWanted={tx.gas_wanted}
@@ -67,7 +67,7 @@ export default class Transaction extends Component{
                         <div className="card-header backgroundcolor"><T>transactions.activities</T></div>
                     </Card>
                     {(tx.tx.value.msg && tx.tx.value.msg.length >0)?tx.tx.value.msg.map((msg,i) => {
-                        return <Card body key={i}><Activities msg={msg} invalid={(!!tx.code)} tags={tx.tags} /></Card>
+                        return <Card body key={i}><TransactionActivities msg={msg} invalid={(!!tx.code)} tags={tx.tags} /></Card>
                     }):''}
                 </Container>
             }

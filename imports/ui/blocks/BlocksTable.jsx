@@ -98,7 +98,7 @@ export default class BlocksTable extends Component {
                     }}>
             <Helmet>
                 <title>Latest Blocks on Color Explorer | Color</title>
-                <meta name="description" content="Latest blocks committed by validators on Cosmos Hub" />
+                <meta name="description" content="Latest blocks committed by validators on Color" />
             </Helmet>
             <Row>
                 <Col md={3} xs={12}><h1 className="d-none d-lg-block"><T>blocks.latestBlocks</T></h1></Col>

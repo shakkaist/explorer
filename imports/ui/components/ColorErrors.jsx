@@ -60,7 +60,7 @@ let errors = {
     }
 }
 
-export default class CosmosErrors extends Component {
+export default class ColorErrors extends Component {
     constructor(props) {
         super(props);
         this.state = {

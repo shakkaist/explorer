@@ -106,7 +106,7 @@ export default class Transactions extends Component{
                     }}>
             <Helmet>
                 <title>Latest Transactions on Color Explorer | Color</title>
-                <meta name="description" content="See what is happening on Cosmos Hub" />
+                <meta name="description" content="See what is happening Color" />
             </Helmet>
             <Row>
                 <Col md={3} xs={12}><h1 className="d-none d-lg-block"><T>transactions.transactions</T></h1></Col>

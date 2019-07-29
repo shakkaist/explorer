@@ -242,6 +242,10 @@
      border-collapse: collapse
  }
  
+ .hidden {
+     display: none
+ }
+
  caption {
      padding-top: 0.75rem;
      padding-bottom: 0.75rem;
@@ -445,6 +449,10 @@
      font-weight: 300
  }
  
+ .display {
+    display: -webkit-inline-box !important
+ }
+
  .display-1 {
      font-size: 6rem;
      font-weight: 300;
@@ -11779,7 +11787,7 @@
  .btn-outline-light {
      position: relative
  }
- 
+
  .btn-outline-light:after {
      content: "";
      display: block;

@@ -31,7 +31,7 @@ MultiSend = (props) => {
     </div>
 }
 
-export default class Activities extends Component {
+export default class TransactionActivities extends Component {
     constructor(props){
         super(props);
     }

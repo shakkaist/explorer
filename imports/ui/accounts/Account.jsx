@@ -141,7 +141,7 @@ export default class AccountDetails extends Component{
                     }}>
                 <Helmet>
                     <title>Account Details of {this.state.address} on Color Explorer | Color</title>
-                    <meta name="description" content={"Account Details of "+this.state.address+" on Cosmos Hub"} />
+                    <meta name="description" content={"Account Details of "+this.state.address+" on Color"} />
                 </Helmet>
                 <Row>
                     <Col md={3} xs={12}><h1 className="d-none d-lg-block"><T>accounts.accountDetails</T></h1></Col>

@@ -76,7 +76,7 @@ export default class VotingPower extends Component{
                 }
             });
 
-            $("#voting-power-chart").height(16*data.length);
+            $("#voting-power-chart").height(30*data.length);
         }
     }
 

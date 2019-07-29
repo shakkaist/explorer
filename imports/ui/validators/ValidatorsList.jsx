@@ -97,7 +97,7 @@ export default class Validators extends Component{
                         padding: '15px 20px 0 20px'
                     }}>
             <Helmet>
-                <title>Color | Explorer by RNS</title>
+                <title>Validators on Color Explorer | Color</title>
                 <meta name="description" content="Here is a list of Color Validators" />
             </Helmet>
             <Row>

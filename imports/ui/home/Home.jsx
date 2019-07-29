@@ -8,7 +8,7 @@ import ChainStates from '../components/ChainStatesContainer.js'
 import { Helmet } from "react-helmet";
 import SideNav, { NavItem, NavIcon, NavText} from '@trendmicro/react-sidenav';
 import '@trendmicro/react-sidenav/dist/react-sidenav.css';
-import TwentyEighty from '../voting-power/TwentyEightyContainer.js';
+import PieChart from './PieChart.js';
 
 export default class Home extends Component{
     constructor(props){
@@ -60,7 +60,7 @@ export default class Home extends Component{
                     }}>
             <Helmet>
                 <title>Color | Explorer by RNS</title>
-                <meta name="description" content="Cosmos is a decentralized network of independent parallel blockchains, each powered by BFT consensus algorithms like Tendermint consensus." />
+                <meta name="description" content="Color is a decentralized network of independent parallel blockchains, each powered by BFT consensus algorithms like Tendermint consensus." />
             </Helmet>
             <Row>
                 <Col md={3} xs={12}><h1>{Meteor.settings.public.chainName}</h1></Col>
@@ -80,7 +80,7 @@ export default class Home extends Component{
             </Row>
             <Row>
                 <Col md={6}>
-                    <TwentyEighty />
+                    <PieChart />
                 </Col>
                 <Col md={6}>
                     <TopValidators />
