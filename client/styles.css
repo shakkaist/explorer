@@ -390,19 +390,19 @@ div#countdown {
 }
 
 #account .available{
-    background-color: #9C27B0
+    background-color: #59ccc8
 }
 
 #account .delegated{
-    background-color: #6610f2
+    background-color: #f95387
 }
 
 #account .unbonding{
-    background-color: #2196F3
+    background-color: #e1ea02
 }
 
 #account .rewards{
-    background-color: #20c997
+    background-color: #db35f8
 }
 
 #account .total{

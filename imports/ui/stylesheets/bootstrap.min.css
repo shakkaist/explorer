@@ -453,6 +453,10 @@
     display: -webkit-inline-box !important
  }
 
+ .marginright {
+    margin-right: -30px !important
+ }
+
  .display-1 {
      font-size: 6rem;
      font-weight: 300;
@@ -505,6 +509,10 @@
      padding-left: 5rem !important
  }
 
+ .resultpaddingleft {
+     padding-left: 0px !important
+ }
+ 
  .list-inline {
      padding-left: 0;
      list-style: none
