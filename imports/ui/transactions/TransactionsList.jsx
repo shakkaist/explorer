@@ -136,7 +136,7 @@ export default class Transactions extends Component{
                 <SideNav.Nav selected={selected} defaultSelected="transactions">
                     <NavItem eventKey="dashboard" onClick={ e => this.props.history.push("/") } title="Dashboard">
                         <NavIcon>
-                            <i className="fa fa-fw fa-th-large" style={{ fontSize: '1.5em', color: 'black' }} />
+                            <i className="fa fa-fw fa-th" style={{ fontSize: '1.5em', color: 'black' }} />
                         </NavIcon>
                         <NavText>
                             Dashboard
@@ -145,7 +145,7 @@ export default class Transactions extends Component{
                     </NavItem>
                     <NavItem eventKey="validators" onClick={ e => this.props.history.push("/validators") } title="Validators">
                         <NavIcon>
-                            <i className="fa fa-fw fa-signal" style={{ fontSize: '1.5em', color: 'black' }} />
+                            <i className="fa fa-fw fa-spinner" style={{ fontSize: '1.5em', color: 'black' }} />
                         </NavIcon>
                         <NavText>
                             Validators
@@ -172,7 +172,7 @@ export default class Transactions extends Component{
                     </NavItem>
                     <NavItem eventKey="proposals" onClick={ e => this.props.history.push("/proposals") } title="Proposals">
                         <NavIcon>
-                            <i className="fa fa-fw fa-list-ul" style={{ fontSize: '1.5em', color: 'black' }} />
+                            <i className="fa fa-fw fa-edit" style={{ fontSize: '1.5em', color: 'black' }} />
                         </NavIcon>
                         <NavText>
                             Proposals
@@ -181,7 +181,7 @@ export default class Transactions extends Component{
                     </NavItem>
                     <NavItem eventKey="voting-power-distribution" onClick={ e => this.props.history.push("/voting-power-distribution") } title="Voting Power">
                         <NavIcon>
-                            <i className="fa fa-fw fa-bolt" style={{ fontSize: '1.5em', color: 'black'}} />
+                            <i className="fa fa-fw fa-chart-bar" style={{ fontSize: '1.5em', color: 'black'}} />
                         </NavIcon>
                         <NavText>
                             Voting Power
